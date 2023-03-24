@@ -1,0 +1,23 @@
+services:
+  pg-database:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: "${POSTGRES_USER}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+      POSTGRES_DB: "new_inject"
+    volumes:
+      - "./new_inject_postgres_data:/var/lib/postgresql/data:rw"
+    ports:
+      - "5432:5432"
+  pg-admin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "${PGADMIN_DEFAULT_EMAIL}"
+      PGADMIN_DEFAULT_PASSWORD: "${PGADMIN_DEFAULT_PASSWORD}"
+    ports:
+      - "8080:80"
+
+networks:
+  airflow:
+    externals:
+      name: custom_network
