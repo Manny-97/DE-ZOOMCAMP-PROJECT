@@ -45,7 +45,7 @@ Embarking on any journey can be a daunting task, but as the saying goes, "part o
 * [Irem Ertürk](https://www.linkedin.com/in/iremerturk/)
 * []()
 * []()
-
+* **Adebisi, Adefunke, and Adedoja, you are my inspiration.**
 
 ## Contact
 
