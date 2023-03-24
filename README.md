@@ -21,7 +21,9 @@ Project description
 ## Proposal
 
 ### Technologies
+- Language: Python
 - Cloud: AWS
+- Containerization: Docker
 - Infrastructure as code (IaC): Terraform
 - Workflow orchestration: Prefect (ingestion pipeline and transformation pipeline)
 - Data Warehouse: Amazon Redshift
@@ -40,7 +42,7 @@ Part of the journey is the end. On this note, I am extremely grateful for the ti
 * [Sejal Vaidya](https://www.linkedin.com/in/vaidyasejal/)
 * [Victoria Perez Mola](https://www.linkedin.com/in/victoriaperezmola/)
 * [Olamide Adesoba](https://www.linkedin.com/in/adesoba-olamide-gmnse-787193169/)
-* []()
+* [Irem Ertürk](https://www.linkedin.com/in/iremerturk/)
 * []()
 * []()
 
