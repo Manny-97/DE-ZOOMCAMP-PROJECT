@@ -35,7 +35,7 @@ Project description
 
 ## Acknowledgments
 
-Part of the journey is the end. On this note, I am extremely grateful for the time this set of wonderful people put in place to ensure I understood the various aspect of data and analytics engineering
+Embarking on any journey can be a daunting task, but as the saying goes, "part of the journey is the end." Reflecting on this phrase, I cannot express enough how truly grateful I am for the unwavering support and guidance of this exceptional group of individuals. Their commitment to helping me grasp the intricacies of data and analytics engineering has been nothing short of remarkable. I am indebted to them for the time, effort, and expertise they have generously invested in me, paving the way for a successful journey.
 
 * [Alexey Grigorev](https://www.linkedin.com/in/agrigorev/)
 * [Ankush Khanna](https://www.linkedin.com/in/ankushkhanna2/)
