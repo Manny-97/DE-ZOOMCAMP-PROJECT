@@ -24,7 +24,7 @@ Project description
 - Language: Python
 - Cloud: AWS
 - Containerization: Docker
-- Infrastructure as code (IaC): Terraform
+- Infrastructure as a code (IaaC): Terraform
 - Workflow orchestration: Prefect (ingestion pipeline and transformation pipeline)
 - Data Warehouse: Amazon Redshift
 - Data Lake: S3 
