@@ -1,0 +1,10 @@
+URL="https://archive.ics.uci.edu/ml/machine-learning-databases/forest-fires/forestfires.csv"
+
+python3 ingest.py \
+  --user=user \
+  --password=password \
+  --host=localhost \
+  --port=5432 \
+  --db=ny_taxi \
+  --table_name=project_table \
+  --url=${URL}
