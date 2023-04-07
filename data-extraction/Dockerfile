@@ -4,6 +4,6 @@ RUN apt-get install wget
 RUN pip install pandas sqlalchemy psycopg2 pyarrow
 
 WORKDIR /app
-COPY  extract.py extract.py
+COPY  ingest.py ingest.py
 
-ENTRYPOINT [ "python", "extract.py" ]
+ENTRYPOINT [ "python", "ingest.py" ]
