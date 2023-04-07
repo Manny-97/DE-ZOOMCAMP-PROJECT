@@ -8,3 +8,25 @@ python3 ingest.py \
   --db=ny_taxi \
   --table_name=project_table \
   --url=${URL}
+
+docker run -it \
+  -e PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL} \
+  -e PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD} \
+  -p 8080:80 \
+  --network=pg-network \
+  --name pg-admin \
+  dpage/pgadmin4
+
+docker build -t data_ingest:v001 .
+
+
+docker run -it \
+  --network=pg-network \
+  data_ingest:v001 \
+    --user=user \
+    --password=password \
+    --host=localhost \
+    --port=5432 \
+    --db=ny_taxi \
+    --table_name=project_table \
+    --url=${URL}
