@@ -1,24 +1,31 @@
-locals {
-  data_lake_bucket = "dtc_data_lake"
+variable "aws_region" {
+  description = "The AWS region to use to create resources."
+  default     = "us-east-2"
 }
 
-variable "project" {
-  description = "Your GCP Project ID"
+variable "bucket_prefix" {
+    type        = string
+    description = "(required since we are not using 'bucket') Creates a unique bucket name beginning with the specified prefix. Conflicts with bucket."
+    default     = "my-s3bucket-"
 }
 
-variable "region" {
-  description = "Region for GCP resources. Choose as per your location: https://cloud.google.com/about/locations"
-  default = "europe-west6"
-  type = string
+variable "tags" {
+    type        = map
+    description = "(Optional) A mapping of tags to assign to the bucket."
+    default     = {
+        environment = "DEV"
+        terraform   = "true"
+    }
 }
 
-variable "storage_class" {
-  description = "Storage class type for your bucket. Check official docs for more info."
-  default = "STANDARD"
+variable "versioning" {
+    type        = bool
+    description = "(Optional) A state of versioning."
+    default     = true
 }
 
-variable "BQ_DATASET" {
-  description = "BigQuery Dataset that raw data (from GCS) will be written to"
-  type = string
-  default = "trips_data_all"
+variable "acl" {
+    type        = string
+    description = " Defaults to private "
+    default     = "private"
 }
