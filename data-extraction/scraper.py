@@ -14,8 +14,6 @@ def get_html(page: int):
     time.sleep(10)
     page_source = driver.page_source
     soup = BeautifulSoup(page_source, 'html.parser')
-    
-    c = 0
    
     table = soup.find_all('tr', class_="table_row")
     return table
@@ -77,4 +75,4 @@ def convert_to_parquet(last_page: int):
     print(df.tail())
 
 if __name__ == "__main__":
-    convert_to_parquet(last_page=4)
+    convert_to_parquet(last_page=169)
