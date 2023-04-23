@@ -7,10 +7,16 @@ from selenium import webdriver
 
 
 def get_html(page: int):
-    """ """
+    """This method uses selenium to call the web page, and then uses 
+    beautifulsoup to extract the statistics table from the html of the page.
+    Args:
+    page (int): The page number for which we want to extract data.
+    """
     print('Opening Chrome.......')
-    driver = webdriver.Chrome(executable_path='D:/KTM project/Motogp/chromedriver_win32/chromedriver.exe')
-    driver.get(f'https://www.motogp.com/en/statistics/gp-race-winners/All-seasons/All-circuits/All-classes/All-countries/?page={page}')
+    path_to_exec = 'D:/KTM project/Motogp/chromedriver_win32/chromedriver.exe'
+    driver = webdriver.Chrome(executable_path=path_to_exec)
+    baseurl = 'https://www.motogp.com/en/statistics/gp-race-winners/All-seasons/'
+    driver.get(f'{baseurl}All-circuits/All-classes/All-countries/?page={page}')
     time.sleep(10)
     page_source = driver.page_source
     soup = BeautifulSoup(page_source, 'html.parser')
@@ -20,13 +26,15 @@ def get_html(page: int):
 
 
 def extract_rider_info(table):
-    """ """
+    """This function extract each rider's information from the table.
+    Args:
+    table: The html reult of a table_row extracted from the source page.
+    """
     reviews = []
     for t in table:
         p=1
         try:
             name=t.find("span",{"class":"surname qa_table_rider_surname"}).text.replace('\n',"")
-            
         except:
             name = None
         try:
@@ -42,23 +50,34 @@ def extract_rider_info(table):
         except:
             circuit = None
         try:
-            constructor=t.find("td",{"class":"table_item constructor qa_table_constructor d-none d-sm-table-cell"}).text.replace('\n',"")
+            const_class = "table_item constructor qa_table_constructor d-none d-sm-table-cell"
+            constructor=t.find("td",{"class":const_class}).text.replace('\n',"")
         except:
             constructor = None
         try:
-            ride_class=t.find("td",{"class":"table_item category qa_table_category d-table-cell text-right pr-8"}).text.replace('\n',"")
+            ride_class = "table_item category qa_table_category d-table-cell text-right pr-8"
+            ride_class=t.find("td",{"class":ride_class}).text.replace('\n',"")
         except:
             ride_class = None
-        rider_name = {"name": name, "season": season, "country": country, "circuit": circuit, "constructor": constructor, "ride_class": ride_class}
+        rider_name = {
+            "name": name, "season": season, "country": country, 
+            "circuit": circuit, "constructor": constructor, 
+            "ride_class": ride_class
+            }
         
         reviews.append(rider_name)
     return reviews
 
 
-def convert_to_parquet(last_page: int):
-    """ """
+def convert_to_csv(last_page: int):
+    """This function calls the other previous functions from page 1 
+    to the last page, and dump the reult into a csv file
+    Args:
+    last_page: the last page you want to extract data up to.
+    """
     list_of_table = []
     for i in range(1, last_page):
+        print("Collecting data for page ", i)
         table = get_html(i)
         list_of_table.append(table)
     list_of_rider_info = []
@@ -75,4 +94,4 @@ def convert_to_parquet(last_page: int):
     print(df.tail())
 
 if __name__ == "__main__":
-    convert_to_parquet(last_page=169)
+    convert_to_csv(last_page=169)
