@@ -13,16 +13,11 @@ def main(params):
     db = params.db
     table_name = params.table_name
     url = params.url
-    output_parquet = "forestfires.csv"
-    # Download the file from its source
-    if not Path("./forestfires.csv").is_file():
-        os.system(f"wget {url} -O {output_parquet}")
+    output_csv = "data/raw/motogp.csv"
 
-        print(f"File successfully downloaded. Now Loading it into databse........")
-    else:
-        print(f"File already exists in the database")
+    print(f"File successfully downloaded. Now Loading it into databse........")
     # Insert the downloaded data into the database
-    df = pd.read_csv(output_parquet)
+    df = pd.read_csv(output_csv)
     print(df.head())
     url = URL.create("postgresql", username=user, password=password, host=host, database=db, port=port)
     engine = create_engine(url)
