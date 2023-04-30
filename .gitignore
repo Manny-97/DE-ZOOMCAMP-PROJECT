@@ -9,6 +9,9 @@ __pycache__/
 # .csv files
 *.csv
 
+# pre-commit hooks
+.pre-commit-config.yaml
+
 # .tfvars
 *.tfvars
 
@@ -16,7 +19,7 @@ __pycache__/
 *.pem
 *.pub
 
-# 
+#
 # Distribution / packaging
 .Python
 build/
