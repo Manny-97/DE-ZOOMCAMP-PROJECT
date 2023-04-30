@@ -11,6 +11,7 @@ __pycache__/
 
 # pre-commit hooks
 .pre-commit-config.yaml
+.isort.cfg
 
 # .tfvars
 *.tfvars
