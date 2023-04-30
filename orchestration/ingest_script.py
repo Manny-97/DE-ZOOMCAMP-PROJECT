@@ -28,7 +28,7 @@ def ingest_data(table_name: str, df: pd.DataFrame):
 
 @flow(name="Test prefect")
 def main(table_name: str):
-    df = pd.read_csv("./data-extraction/data/raw/motogp.csv")
+    df = pd.read_csv("../data-extraction/data/raw/motogp.csv")
     data = transform(df)
     ingest_data(table_name, data)
 
