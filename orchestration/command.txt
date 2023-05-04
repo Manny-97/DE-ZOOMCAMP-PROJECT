@@ -1,0 +1,9 @@
+For deployment
+- prefect build ./parameterized_flow.py:etl_parent_flow -n "Parameterized ETL"
+ etl_parent_flow is the entry point i.e. the flow command that we will be calling inside parameterized_flow.py
+- prefect deployment apply etl_parent_flow-deployment.yaml
+to execute flow runs from this deployment, satart an agent that pulls work from the "default" ork queue:
+- prefect agent start --work-queue "default"
+to build deployment using schedule on the terminal:
+- prefect build ./parameterized_flow:etl_parent_flow -n etl2 --cron "0 0 * * *" -a
+etl2 is the new name of our deployment, -a tag implies apply, "0 0 * * *" is the schedule time, day, month, year for cron job
