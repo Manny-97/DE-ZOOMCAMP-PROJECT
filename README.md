@@ -26,7 +26,7 @@ Project description
 
 ## Inference
 ![Giacomo Agostini](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5ce7e982141457968f9350ac37f2aad5dc29a22d/images/giacomo.jpeg)
-![Valentino Rossi](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5ce7e982141457968f9350ac37f2aad5dc29a22d/images/giacomo.jpeg)
+![Valentino Rossi](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/06109ba453390ff30e997f38d17b49a434929e1d/images/valentino_rossi.webp)
 ![Angel Nieto](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5ce7e982141457968f9350ac37f2aad5dc29a22d/images/angel_nieto.jpeg)
 ![Marc Marquez](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5ce7e982141457968f9350ac37f2aad5dc29a22d/images/marquez.jpg)
 ![Mike Hailwood](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5ce7e982141457968f9350ac37f2aad5dc29a22d/images/mike_hailwood.jpeg)
