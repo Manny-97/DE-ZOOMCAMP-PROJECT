@@ -1,8 +1,10 @@
 # DE-ZOOMCAMP-PROJECT
+## Project Title: "Building a Data Pipeline Analysis of MotoGP Racing Data"
 ![MOTOGP](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5ce7e982141457968f9350ac37f2aad5dc29a22d/images/rossi1.png)
 ## Objective
 
 Project description
+In this project, we will scrape data from the MotoGP website and perform data engineering tasks to clean and prepare the data for analysis. The data will include race results over the years. Once the data is cleaned and prepared, we will perform exploratory data analysis and visualization to gain insights into the data.
 
 ## Architecture
 
@@ -17,6 +19,20 @@ Project description
 
 
 ## Dataset description
+![Table](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/396add24aaa033b62f4cb90528663ca805b5c0a6/images/redshift.png)
+1. `name`: This column represents the name of the rider who won the Grand Prix race.
+
+2. `season`: This column represents the season or year in which the race took place.
+
+3. `country`: This column represents the country in which the race was held.
+
+4. `circuit`: This column represents the name of the circuit where the race was held.
+
+5. `constructor`: This column represents the name of the bike manufacturer that the rider used to win the race.
+
+6. `ride_class`: This column represents the classification of the race.
+
+The dataset provides information about the winners of the races, including their name, the year the race was held, the country where the race was held, the circuit where the race was held, the manufacturer of the motorcycle used, and the classification of the race. The data can be used to analyze the performance of riders, the success of bike manufacturers, the popularity of circuits, and the differences in performance between different classification of races.
 
 ## Proposal
 
@@ -25,11 +41,11 @@ Project description
 ![Greatest Riders](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5c8ecaac575afab0db4b96cd99bd647180e9826e/images/Motogp_Goats.png)
 
 ## Inference
-![Giacomo Agostini](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5ce7e982141457968f9350ac37f2aad5dc29a22d/images/giacomo.jpeg)
+
 ![Valentino Rossi](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/06109ba453390ff30e997f38d17b49a434929e1d/images/valentino_rossi.webp)
-![Angel Nieto](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5ce7e982141457968f9350ac37f2aad5dc29a22d/images/angel_nieto.jpeg)
+
 ![Marc Marquez](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5ce7e982141457968f9350ac37f2aad5dc29a22d/images/marquez.jpg)
-![Mike Hailwood](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5ce7e982141457968f9350ac37f2aad5dc29a22d/images/mike_hailwood.jpeg)
+
 
 ### Technologies
 - Language: Python
