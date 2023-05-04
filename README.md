@@ -1,5 +1,5 @@
 # DE-ZOOMCAMP-PROJECT
-
+![MOTOGP](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5ce7e982141457968f9350ac37f2aad5dc29a22d/images/rossi1.png)
 ## Objective
 
 Project description
@@ -23,6 +23,13 @@ Project description
 ## Dashboard
 ![A Simple Dashboard](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/726a4e61a9d7dc30f4ec4209386b3ef768632458/images/Motogp_Report.png)
 ![Greatest Riders](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5c8ecaac575afab0db4b96cd99bd647180e9826e/images/Motogp_Goats.png)
+
+## Inference
+![Giacomo Agostini](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5ce7e982141457968f9350ac37f2aad5dc29a22d/images/giacomo.jpeg)
+![Valentino Rossi](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5ce7e982141457968f9350ac37f2aad5dc29a22d/images/giacomo.jpeg)
+![Angel Nieto](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5ce7e982141457968f9350ac37f2aad5dc29a22d/images/angel_nieto.jpeg)
+![Marc Marquez](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5ce7e982141457968f9350ac37f2aad5dc29a22d/images/marquez.jpg)
+![Mike Hailwood](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5ce7e982141457968f9350ac37f2aad5dc29a22d/images/mike_hailwood.jpeg)
 
 ### Technologies
 - Language: Python
