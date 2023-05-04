@@ -20,6 +20,9 @@ Project description
 
 ## Proposal
 
+## Dashboard
+[A Simple Dashboard](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/721c01aaea027d768fbe9e27d5936b77b977494f/images/Motogp_Report.pdf)
+
 ### Technologies
 - Language: Python
 - Cloud: AWS
@@ -27,7 +30,7 @@ Project description
 - Infrastructure as a code (IaaC): Terraform
 - Workflow orchestration: Prefect (ingestion pipeline and transformation pipeline)
 - Data Warehouse: Amazon Redshift
-- Data Lake: S3 
+- Data Lake: S3
 - Batch processing/Transformations: dbt cloud
 - Dashboard: Looker Studio
 - Stream processing: Kafka
