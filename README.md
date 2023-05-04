@@ -8,7 +8,7 @@ In this project, we will scrape data from the MotoGP website and perform data en
 
 ## Architecture
 
-![Project pipeline](https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2020/09/21/serverless-analytics-pipeline-2-840x630.jpg)
+![Project pipeline](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/9bbd1f0f2d7a0e0050cb2a2b326929207f783ca7/images/architecture.png)
 
 ## Problem statement
 Motorsports have a massive global following, and MotoGP is one of the most popular motorsport events worldwide. MotoGP race results are crucial data for fans, teams, and sponsors as they help to evaluate a rider's performance and make informed decisions about future strategies.
