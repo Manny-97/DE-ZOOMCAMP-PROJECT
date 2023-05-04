@@ -30,7 +30,7 @@ def clean(df: pd.DataFrame):
 def write_local(df: pd.DataFrame) -> Path:
     """Write DataFrame out locally as parquet file"""
     path = Path("../data-extraction/data/ref/")
-
+    df.to_csv(os.path.join(path, "motogp.csv"), index=False)
     df.to_parquet(os.path.join(path, "motogp.parquet"), compression="gzip")
     return path
 
