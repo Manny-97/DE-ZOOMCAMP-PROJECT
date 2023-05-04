@@ -11,11 +11,19 @@ In this project, we will scrape data from the MotoGP website and perform data en
 ![Project pipeline](https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2020/09/21/serverless-analytics-pipeline-2-840x630.jpg)
 
 ## Problem statement
+Motorsports have a massive global following, and MotoGP is one of the most popular motorsport events worldwide. MotoGP race results are crucial data for fans, teams, and sponsors as they help to evaluate a rider's performance and make informed decisions about future strategies.
 
+Currently, the data for MotoGP race results are scattered across different sources and formats, which makes it difficult to get meaningful insights. There is a need to set up a data pipeline to collect, process, and store the race results data in a structured format to facilitate analysis and reporting.
+
+Moreover, there is a need to create a dashboard that presents the top-performing riders and bike manufacturers by country and circuit, as well as a summary of past race results. The dashboard will provide insights into the trends and patterns of MotoGP race results, helping teams, sponsors, and fans make informed decisions.
 
 
 ## Main objective
+To address the problem, we propose setting up a data pipeline that collects and processes MotoGP race results data from different sources and stores it in a centralized Redshift database. We will use tools like Python and BeautifulSoup to scrape data from the MotoGP website and load it into the database.
 
+Next, we will transform and aggregate the data using DBT to create models that answer questions such as "What are the top performing riders/teams in the current season by country and circuit?" and "Which bike manufacturer has the highest win rate by season and ride class?"
+
+Finally, we will create a dashboard using Looker that presents the results in an easy-to-understand format. The dashboard will provide a summary of past race results and insights into the top-performing riders and bike manufacturers by country and circuit. This dashboard will be accessible to stakeholders like teams, sponsors, and fans, who can use it to make informed decisions about their future strategies.
 
 
 ## Dataset description
