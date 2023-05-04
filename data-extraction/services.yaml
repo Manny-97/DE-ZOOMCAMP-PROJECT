@@ -1,0 +1,97 @@
+services:
+  postgres:
+    image: 14
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 5s
+      retries: 5
+    restart: always
+
+#  Command to setup the docker image for this pproject
+
+docker run -it \
+  -e POSTGRES_USER=${POSTGRES_USER} \
+  -e POSTGRES_PASSWORD=${POSTGRES_PASSWORD} \
+  -e POSTGRES_DB="ny_taxi" \
+  -v /Users/user/Desktop/Data-Engineering/DE-project1/Data-Engineering-Project/week-1/docker_sql/ny_taxi_postgres_data:/var/lib/postgresql/data \
+  -p 5432:5432 \
+postgres:14
+
+
+docker run -it \
+  -e POSTGRES_USER=${POSTGRES_USER} \
+  -e POSTGRES_PASSWORD=${POSTGRES_PASSWORD} \
+  -e POSTGRES_DB="ny_taxi" \
+  -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data \
+  -p 5432:5432 \
+postgres:14
+
+docker run -it \
+  -e PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_PASSWORD} \
+  -e PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD} \
+  -p 8080:80 \
+  dpage/pgadmin4
+
+
+# Create Network
+
+docker network create pg-network
+
+docker run -it \
+  -e POSTGRES_USER=${POSTGRES_USER} \
+  -e POSTGRES_PASSWORD=${POSTGRES_PASSWORD} \
+  -e POSTGRES_DB="ny_taxi" \
+  -v /Users/user/Desktop/Data-Engineering/DE-project1/Data-Engineering-Project/week-1/docker_sql/ny_taxi_postgres_data:/var/lib/postgresql/data \
+  -p 5432:5432 \
+  --network=pg-network \
+  --name pg-database \
+  postgres:14
+
+docker run -it \
+  -e PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL} \
+  -e PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD} \
+  -p 8080:80 \
+  --network=pg-network \
+  --name pg-admin \
+  dpage/pgadmin4
+
+# data ingestion
+
+URL="https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2021-01.parquet"
+python ingest-data.py \
+  --user=postgres \
+  --password=${POSTGRES_PASSWORD} \
+  --host=localhost \
+  --port=5432 \
+  --db=ny_taxi \
+  --table_name=yellow_taxi_trips \
+  --url=${URL}
+
+docker build -t taxi_ingest:v001 .
+
+docker run -it taxi_ingest:v001 \
+  --user=postgres \
+  --password=${POSTGRES_PASSWORD} \
+  --host=localhost \
+  --port=5432 \
+  --db=ny_taxi \
+  --table_name=yellow_taxi_trips \
+  --url=${URL}
+
+
+docker run -it \
+  --network=pg-network \
+  taxi_ingest:v001 \
+    --user=root \
+    --password=${POSTGRES_PASSWORD} \
+    --host=pg-database \
+    --port=5432 \
+    --db=ny_taxi \
+    --table_name=yellow_taxi_trips \
+    --url=${URL}
