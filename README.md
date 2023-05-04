@@ -1,5 +1,5 @@
 # DE-ZOOMCAMP-PROJECT
-## Project Title: "Building a Data Pipeline Analysis of MotoGP Racing Data"
+## Project Title: "Analyzing MotoGP Racing Data using a Data Pipeline"
 ![MOTOGP](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5ce7e982141457968f9350ac37f2aad5dc29a22d/images/rossi1.png)
 ## Objective
 
