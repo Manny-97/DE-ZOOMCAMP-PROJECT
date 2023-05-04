@@ -22,6 +22,7 @@ Project description
 
 ## Dashboard
 ![A Simple Dashboard](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/726a4e61a9d7dc30f4ec4209386b3ef768632458/images/Motogp_Report.png)
+![Greatest Riders](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5c8ecaac575afab0db4b96cd99bd647180e9826e/images/Motogp_Goats.png)
 
 ### Technologies
 - Language: Python
