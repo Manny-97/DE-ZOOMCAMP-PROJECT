@@ -44,8 +44,8 @@ The dataset provides information about the winners of the races, including their
 
 
 ## Dashboard
-![Dasboard](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/45679eee27fc910012bb74eb40816cc9707fb4dd/images/Motogp_Report.jpg)
-![GOAT](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/45679eee27fc910012bb74eb40816cc9707fb4dd/images/Motogp_Goats.jpg)
+![Dasboard](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/3579a7ee5fbd3b45181c696f6abf57e5b806d2cb/images/Motogp_Goats.png)
+![GOAT](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/3579a7ee5fbd3b45181c696f6abf57e5b806d2cb/images/Motogp_Report.png)
 
 ## Inference
 The MotoGP data reveals that Giacomo Agostini has the most wins (122), but is now retired at age 80. Valentino Rossi has 115 wins and is still actively competing at age 44. Angel Nieto (90 wins) and Mike Hailwood (76 wins) are no longer with us. Marc Marquez has 85 wins and is currently competing at age 30. Nearly half of the MotoGP races (47.3%) take place in Spain and Italy, indicating their significant influence on the sport's popularity in Europe. Overall, MotoGP is a highly competitive sport with a rich history of successful racers.
