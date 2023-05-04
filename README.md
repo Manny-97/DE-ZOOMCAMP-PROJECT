@@ -42,13 +42,13 @@ Finally, we will create a dashboard using Looker that presents the results in an
 
 The dataset provides information about the winners of the races, including their name, the year the race was held, the country where the race was held, the circuit where the race was held, the manufacturer of the motorcycle used, and the classification of the race. The data can be used to analyze the performance of riders, the success of bike manufacturers, the popularity of circuits, and the differences in performance between different classification of races.
 
-## Proposal
 
 ## Dashboard
 ![A Simple Dashboard](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/726a4e61a9d7dc30f4ec4209386b3ef768632458/images/Motogp_Report.png)
 ![Greatest Riders](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/5c8ecaac575afab0db4b96cd99bd647180e9826e/images/Motogp_Goats.png)
 
 ## Inference
+The MotoGP data reveals that Giacomo Agostini has the most wins (122), but is now retired at age 80. Valentino Rossi has 115 wins and is still actively competing at age 44. Angel Nieto (90 wins) and Mike Hailwood (76 wins) are no longer with us. Marc Marquez has 85 wins and is currently competing at age 30. Nearly half of the MotoGP races (47.3%) take place in Spain and Italy, indicating their significant influence on the sport's popularity in Europe. Overall, MotoGP is a highly competitive sport with a rich history of successful racers.
 
 ![Valentino Rossi](https://github.com/Manny-97/DE-ZOOMCAMP-PROJECT/blob/06109ba453390ff30e997f38d17b49a434929e1d/images/valentino_rossi.webp)
 
