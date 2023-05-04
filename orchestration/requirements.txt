@@ -6,3 +6,4 @@ prefect==2.10.2
 prefect-sqlalchemy==0.2.4
 prefect-gcp==0.4.0
 prefect-aws==0.3.0
+pandas-redshift==2.0.5
