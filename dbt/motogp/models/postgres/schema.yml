@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: motogp_source
+    description: "A starter dbt model"
+    database: motogp
+    schema: public
+    tables:
+      - name: motogp
+        description: "Details about each rider"
